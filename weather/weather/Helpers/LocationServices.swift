@@ -6,15 +6,19 @@
 //  Copyright © 2018 Asif Junaid. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import CoreLocation
 
 protocol locationServiceDelegate{
     
+    func didUpdateLocation(_ service: LocationService, location: CLLocation)
+    
+    func didFailWithError(_ service: LocationService, error: Error)
+    
 }
 /// Location Services is responsible to fetch current location coordinates
-class LocationServices: NSObject {
-    var delegate : LocationServices?
+class LocationService: NSObject {
+    var delegate : locationServiceDelegate?
     let locationManager = CLLocationManager()
     override init() {
         super.init()
@@ -27,6 +31,16 @@ class LocationServices: NSObject {
     }
 }
 
-extension LocationServices : CLLocationManagerDelegate{
+extension LocationService : CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            delegate?.didUpdateLocation(self, location: location)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        delegate?.didFailWithError(self, error: error)
+    }
     
 }
