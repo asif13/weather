@@ -28,8 +28,11 @@ class WeatherViewModel {
     
     /// Updates current location
     func updateCurrentLocation(){
-        locationService.delegate = self
-        locationService.updateLocation()
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            self.locationService.delegate = self
+            self.locationService.updateLocation()
+        }
     }
 }
 

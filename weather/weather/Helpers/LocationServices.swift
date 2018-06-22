@@ -23,7 +23,7 @@ class LocationService: NSObject {
     override init() {
         super.init()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
     }
     func updateLocation(){
         locationManager.requestWhenInUseAuthorization()

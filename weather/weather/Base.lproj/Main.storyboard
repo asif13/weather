@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="weathericons-regular-webfont.ttf">
+            <string>WeatherIcons-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,7 +29,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufN-ZY-JOc">
                                         <rect key="frame" x="24" y="30" width="327" height="128"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dubai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWh-xH-dOd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWh-xH-dOd">
                                                 <rect key="frame" x="0.0" y="8" width="215" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="1l6-y0-31k"/>
@@ -33,19 +38,19 @@
                                                 <color key="textColor" red="0.28235294117647058" green="0.20000000000000001" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHE-45-lcH">
-                                                <rect key="frame" x="0.0" y="45" width="215" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHE-45-lcH">
+                                                <rect key="frame" x="0.0" y="45" width="215" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <color key="textColor" red="0.28235294119999998" green="0.20000000000000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hrl-dc-4ek">
-                                                <rect key="frame" x="0.0" y="73" width="215" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hrl-dc-4ek">
+                                                <rect key="frame" x="0.0" y="53" width="215" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <color key="textColor" red="0.28235294119999998" green="0.20000000000000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-x6-LaE">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-x6-LaE">
                                                 <rect key="frame" x="232" y="8" width="87" height="30"/>
                                                 <color key="backgroundColor" red="0.75294117647058822" green="0.55686274509803924" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -80,11 +85,47 @@
                                             <constraint firstItem="GHE-45-lcH" firstAttribute="leading" secondItem="ZWh-xH-dOd" secondAttribute="leading" id="uIk-q0-rCO"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6K-Nn-Ser">
+                                        <rect key="frame" x="0.0" y="145.5" width="375" height="228"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-QJ-ohX">
+                                                <rect key="frame" x="8" y="20.5" width="152" height="187"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="152" id="eth-fy-eB5"/>
+                                                    <constraint firstAttribute="height" constant="187" id="ld9-hE-gFA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="129"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-V0-6QX">
+                                                <rect key="frame" x="168" y="20.5" width="199" height="187"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="187" id="c5L-hN-DQz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="53"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.82352941180000006" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="1cF-QJ-ohX" firstAttribute="centerY" secondItem="y6K-Nn-Ser" secondAttribute="centerY" id="BKW-AW-hsz"/>
+                                            <constraint firstItem="ncL-V0-6QX" firstAttribute="centerY" secondItem="y6K-Nn-Ser" secondAttribute="centerY" id="Vz9-tG-iYE"/>
+                                            <constraint firstAttribute="height" constant="228" id="aTE-ZI-Ide"/>
+                                            <constraint firstAttribute="trailing" secondItem="ncL-V0-6QX" secondAttribute="trailing" constant="8" id="f92-AJ-OSr"/>
+                                            <constraint firstItem="ncL-V0-6QX" firstAttribute="leading" secondItem="1cF-QJ-ohX" secondAttribute="trailing" constant="8" id="h0v-ZE-LgX"/>
+                                            <constraint firstItem="1cF-QJ-ohX" firstAttribute="leading" secondItem="y6K-Nn-Ser" secondAttribute="leading" constant="8" id="zQ0-EI-Omq"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98431372549019602" green="0.82352941176470584" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="y6K-Nn-Ser" firstAttribute="centerY" secondItem="Ul0-DQ-n9K" secondAttribute="centerY" id="2M9-6n-ihO"/>
                                     <constraint firstItem="ufN-ZY-JOc" firstAttribute="top" secondItem="Ul0-DQ-n9K" secondAttribute="top" constant="30" id="EFv-rD-3Ns"/>
                                     <constraint firstAttribute="trailing" secondItem="ufN-ZY-JOc" secondAttribute="trailing" constant="24" id="NzX-FR-lFu"/>
+                                    <constraint firstItem="y6K-Nn-Ser" firstAttribute="leading" secondItem="Ul0-DQ-n9K" secondAttribute="leading" id="jn4-j1-tz1"/>
+                                    <constraint firstAttribute="trailing" secondItem="y6K-Nn-Ser" secondAttribute="trailing" id="lRO-dM-nyN"/>
                                     <constraint firstItem="ufN-ZY-JOc" firstAttribute="leading" secondItem="Ul0-DQ-n9K" secondAttribute="leading" constant="24" id="oiY-ln-T7k"/>
                                 </constraints>
                             </view>
@@ -113,6 +154,8 @@
                         <outletCollection property="weatherDetails" destination="ZWh-xH-dOd" collectionClass="NSMutableArray" id="jes-S9-1fH"/>
                         <outletCollection property="weatherDetails" destination="GHE-45-lcH" collectionClass="NSMutableArray" id="l5y-XT-u4H"/>
                         <outletCollection property="weatherDetails" destination="hrl-dc-4ek" collectionClass="NSMutableArray" id="ngp-4K-Bjn"/>
+                        <outletCollection property="weatherDetails" destination="1cF-QJ-ohX" collectionClass="NSMutableArray" id="zYd-Fx-3A1"/>
+                        <outletCollection property="weatherDetails" destination="ncL-V0-6QX" collectionClass="NSMutableArray" id="trB-mC-elB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

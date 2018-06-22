@@ -15,8 +15,12 @@ struct CMForecast {
 }
 
 struct CMWeather {
-    let location: String
+    let location: String 
+    let weatherDescription: String
+    let date : String
     let iconText: String
     let temperature: String
     let forecasts: [CMForecast]
+    
 }
+

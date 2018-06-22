@@ -25,12 +25,18 @@ class WeatherViewController: UIViewController {
     }
     
     func updateViewModel(){
+        
         viewModel = WeatherViewModel()
         viewModel?.updateCurrentLocation()
+        
+        //closure to update view when model is updated
         viewModel?.didUpdateModel = { [weak self] weather in
             DispatchQueue.main.async {
                 self?.weatherDetails[0].text = weather?.location ?? ""
-                self?.weatherDetails[2].text = weather?.temperature ?? ""
+                self?.weatherDetails[1].text = weather?.date ?? ""
+                self?.weatherDetails[2].text = weather?.weatherDescription ?? ""
+                self?.weatherDetails[3].text = weather?.iconText ?? ""
+                self?.weatherDetails[4].text = weather?.temperature ?? ""
 
             }
         }

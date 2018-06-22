@@ -8,14 +8,25 @@
 
 import Foundation
 
-class Utils {
-    
+struct TemperatureConverter {
     static func kelvinToCelsius(_ degrees: Double) -> Double {
         return round(degrees - 273.15)
     }
     
     static func kelvinToFahrenheit(_ degrees: Double) -> Double {
         return round(degrees * 9 / 5 - 459.67)
+    }
+}
+
+struct Temperature {
+    let degrees: String
+    
+    init(country: String, openWeatherMapDegrees: Double) {
+        if country == "US" {
+            degrees = String(TemperatureConverter.kelvinToFahrenheit(openWeatherMapDegrees)) + "\u{f045}"
+        } else {
+            degrees = String(TemperatureConverter.kelvinToCelsius(openWeatherMapDegrees)) + "\u{f03c}"
+        }
     }
 }
 
