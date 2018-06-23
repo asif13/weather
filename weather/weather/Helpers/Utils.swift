@@ -55,4 +55,13 @@ extension UIView {
     class func fromNib<T: UIView>() -> T {
         return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
     }
+    func dropShadow(scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.withAlphaComponent(0.30).cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        layer.shadowRadius = 1
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
 }

@@ -15,15 +15,24 @@ class RestaurantViewController: UIViewController {
     @IBOutlet weak var restaurantTable: RestaurantTableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet var filterViews: [UIView]!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = false
+        updateViews()
         updateViewModel()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func updateViews(){
+        
+        navigationController?.navigationBar.isHidden = false
+
+        for view in filterViews{
+            view.dropShadow()
+        }
     }
     func updateViewModel(){
        

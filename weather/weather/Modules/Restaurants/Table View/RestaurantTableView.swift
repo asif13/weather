@@ -21,6 +21,7 @@ class RestaurantTableView: UITableView {
         super.init(frame: frame, style: style)
         dataSource = self
         tableFooterView = UIView()
+        tableHeaderView = UIView()
     }
     
     
@@ -28,6 +29,8 @@ class RestaurantTableView: UITableView {
         super.init(coder: aDecoder)
         dataSource = self
         tableFooterView = UIView()
+        tableHeaderView = UIView()
+
     }
     
 }
