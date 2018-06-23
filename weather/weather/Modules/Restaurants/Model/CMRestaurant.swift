@@ -9,9 +9,10 @@
 import Foundation
 
 struct CMRestaurant {
-    var cuisines : String?
-    var rating : Double?
-    var name : String?
-    var imageUrl : URL?
-    var reviewCount : Int?
+    let city : String?
+    let cuisines : String?
+    let rating : Double?
+    let name : String?
+    let imageUrl : URL?
+    let reviewCount : Int?
 }

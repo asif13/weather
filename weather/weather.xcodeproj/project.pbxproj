@@ -30,6 +30,8 @@
 		8E200FA320DE5FB900C9B9B9 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200FA220DE5FB900C9B9B9 /* RestaurantService.swift */; };
 		8E200FA620DE6AA600C9B9B9 /* RestaurantCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200FA520DE6AA600C9B9B9 /* RestaurantCodable.swift */; };
 		8E200FAA20DE750C00C9B9B9 /* CMRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200FA920DE750C00C9B9B9 /* CMRestaurant.swift */; };
+		8E54726320DE9103003B5CCA /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54726220DE9103003B5CCA /* RestaurantTableViewCell.swift */; };
+		8E54726520DE920A003B5CCA /* RestaurantTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54726420DE920A003B5CCA /* RestaurantTableView.swift */; };
 		8EAD075120DE276400285B85 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD075020DE276400285B85 /* Temperature.swift */; };
 		8EAD075320DE2A7600285B85 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD075220DE2A7600285B85 /* UIViewController+Alert.swift */; };
 		8EAD075620DE368900285B85 /* AdditionalInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD075520DE368900285B85 /* AdditionalInfo.xib */; };
@@ -63,6 +65,8 @@
 		8E200FA220DE5FB900C9B9B9 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
 		8E200FA520DE6AA600C9B9B9 /* RestaurantCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantCodable.swift; path = Services/RestaurantCodable.swift; sourceTree = "<group>"; };
 		8E200FA920DE750C00C9B9B9 /* CMRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRestaurant.swift; sourceTree = "<group>"; };
+		8E54726220DE9103003B5CCA /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		8E54726420DE920A003B5CCA /* RestaurantTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableView.swift; sourceTree = "<group>"; };
 		8EAD075020DE276400285B85 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		8EAD075220DE2A7600285B85 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		8EAD075520DE368900285B85 /* AdditionalInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionalInfo.xib; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		8E200F9D20DE59A500C9B9B9 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
+				8E54726120DE90E0003B5CCA /* Table View */,
 				8E200FA820DE74F600C9B9B9 /* Model */,
 				8E200FA420DE5FC500C9B9B9 /* Services */,
 				8E200FA020DE5B0300C9B9B9 /* RestaurantViewModel.swift */,
@@ -220,6 +225,15 @@
 				8E200FA920DE750C00C9B9B9 /* CMRestaurant.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8E54726120DE90E0003B5CCA /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				8E54726220DE9103003B5CCA /* RestaurantTableViewCell.swift */,
+				8E54726420DE920A003B5CCA /* RestaurantTableView.swift */,
+			);
+			path = "Table View";
 			sourceTree = "<group>";
 		};
 		8EAD075420DE367100285B85 /* Additional Info */ = {
@@ -319,10 +333,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-weather/Pods-weather-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -386,10 +404,12 @@
 				8E0DCE6B20DCCC6B00D7AD06 /* LocationServices.swift in Sources */,
 				8E0DCE7D20DD2C4700D7AD06 /* WeatherIcon.swift in Sources */,
 				8E200FA620DE6AA600C9B9B9 /* RestaurantCodable.swift in Sources */,
+				8E54726320DE9103003B5CCA /* RestaurantTableViewCell.swift in Sources */,
 				8E200FA120DE5B0300C9B9B9 /* RestaurantViewModel.swift in Sources */,
 				8E0DCE6E20DCDB9400D7AD06 /* WeatherService.swift in Sources */,
 				8E0DCE7B20DD06B900D7AD06 /* CMWeather.swift in Sources */,
 				8E200FAA20DE750C00C9B9B9 /* CMRestaurant.swift in Sources */,
+				8E54726520DE920A003B5CCA /* RestaurantTableView.swift in Sources */,
 				8E200FA320DE5FB900C9B9B9 /* RestaurantService.swift in Sources */,
 				8EAD075820DE369700285B85 /* AdditionalInfo.swift in Sources */,
 				8E1412C320DB8D72005DBBC6 /* AppDelegate.swift in Sources */,

@@ -50,11 +50,12 @@ class RestaurantViewModel: NSObject {
         for restaurant in restaurants{
 
             let model = CMRestaurant(
+                city: restaurant.location?.city ?? "",
                 cuisines: restaurant.cuisines ?? "",
-                rating: restaurant.user_ratings?.aggregate_rating ?? 0,
-                name: restaurant.name ?? "",
+                rating: Double(restaurant.user_rating?.aggregate_rating ?? "0"),
+                name: restaurant.name ,
                 imageUrl:  URL(string: restaurant.thumb ?? ""),
-                reviewCount: restaurant.user_ratings?.votes ?? 0)
+                reviewCount:  Int(restaurant.user_rating?.votes ?? "0"))
             models.append(model)
         }
         

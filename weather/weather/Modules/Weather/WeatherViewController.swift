@@ -15,16 +15,20 @@ class WeatherViewController: UIViewController {
     @IBOutlet var weatherDetails: [UILabel]!
     
     @IBOutlet weak var additionalInfo: UIScrollView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var forecastView: ForecastCollectionView!
+    @IBOutlet weak var popularRestaurantsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
         updateViewModel()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,7 +38,7 @@ class WeatherViewController: UIViewController {
         
         viewModel = WeatherViewModel()
         viewModel?.updateCurrentLocation()
-        
+        popularRestaurantsButton.isEnabled = false
         //closure to update view when model is updated
         viewModel?.didUpdateModel = { [weak self] weather in
             DispatchQueue.main.async {
@@ -47,6 +51,8 @@ class WeatherViewController: UIViewController {
                 if let forecast = weather?.forecasts{
                     self?.forecastView.model = forecast
                 }
+                self?.popularRestaurantsButton.isEnabled = true
+                self?.activityIndicator.stopAnimating()
             }
         }
         
@@ -56,6 +62,7 @@ class WeatherViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self?.alert("Alert", message: error.error.rawValue)
+                self?.activityIndicator.stopAnimating()
             }
             
         }

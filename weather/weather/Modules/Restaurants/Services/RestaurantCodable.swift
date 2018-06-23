@@ -21,13 +21,12 @@ struct Restaurant : Codable{
     var featured_image : String?
     var location : Location?
     var thumb : String?
-    var user_ratings : UserRatings?
+    var user_rating : UserRatings?
 }
 struct Location : Codable {
     var city : String?
 }
 struct UserRatings : Codable {
-    var aggregate_rating : Double?
-    var rating_color : String?
-    var votes : Int?
+    var aggregate_rating : String?
+    var votes : String?
 }

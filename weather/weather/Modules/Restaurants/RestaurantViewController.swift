@@ -12,6 +12,9 @@ class RestaurantViewController: UIViewController {
    
     let viewModel = RestaurantViewModel()
     
+    @IBOutlet weak var restaurantTable: RestaurantTableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
@@ -28,7 +31,8 @@ class RestaurantViewController: UIViewController {
         //closure to update view when model is updated
         viewModel.didUpdateModel = { [weak self] restaurants in
             DispatchQueue.main.async {
-                print(restaurants)
+                self?.restaurantTable.model = restaurants
+                self?.activityIndicator.stopAnimating()
             }
         }
         
@@ -37,6 +41,7 @@ class RestaurantViewController: UIViewController {
         viewModel.didGetError = { [weak self] error in
             
             DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
                 self?.alert("Alert", message: error.error.rawValue)
             }
             

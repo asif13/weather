@@ -36,6 +36,7 @@ class RestaurantService {
                 failblock(ErrorCodes(error: .dataParsing))
                 return
             }
+            print(restaurants)
             let restaurantData = restaurants.restaurants.map({$0.restaurant})
             successblock(restaurantData)
         }

@@ -25,10 +25,10 @@ struct CMWeather {
 }
 
 struct WeatherExtraInfo {
-    var humidity : String?
-    var pressure : String?
-    var windSpeed : String?
-    var minimumTemp : String?
-    var maximumTemp : String?
+    let humidity : String?
+    let pressure : String?
+    let windSpeed : String?
+    let minimumTemp : String?
+    let maximumTemp : String?
 }
 
