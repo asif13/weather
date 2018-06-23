@@ -25,6 +25,11 @@
 		8E1412CD20DB8D77005DBBC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1412CB20DB8D77005DBBC6 /* LaunchScreen.storyboard */; };
 		8E200F9820DE4CFE00C9B9B9 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200F9720DE4CFE00C9B9B9 /* ForecastCollectionViewCell.swift */; };
 		8E200F9C20DE4EDA00C9B9B9 /* ForecastCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200F9B20DE4EDA00C9B9B9 /* ForecastCollectionView.swift */; };
+		8E200F9F20DE5AEF00C9B9B9 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200F9E20DE5AEF00C9B9B9 /* RestaurantViewController.swift */; };
+		8E200FA120DE5B0300C9B9B9 /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200FA020DE5B0300C9B9B9 /* RestaurantViewModel.swift */; };
+		8E200FA320DE5FB900C9B9B9 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200FA220DE5FB900C9B9B9 /* RestaurantService.swift */; };
+		8E200FA620DE6AA600C9B9B9 /* RestaurantCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200FA520DE6AA600C9B9B9 /* RestaurantCodable.swift */; };
+		8E200FAA20DE750C00C9B9B9 /* CMRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E200FA920DE750C00C9B9B9 /* CMRestaurant.swift */; };
 		8EAD075120DE276400285B85 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD075020DE276400285B85 /* Temperature.swift */; };
 		8EAD075320DE2A7600285B85 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD075220DE2A7600285B85 /* UIViewController+Alert.swift */; };
 		8EAD075620DE368900285B85 /* AdditionalInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD075520DE368900285B85 /* AdditionalInfo.xib */; };
@@ -39,7 +44,7 @@
 		8E0DCE6A20DCCC6B00D7AD06 /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		8E0DCE6D20DCDB9400D7AD06 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		8E0DCE6F20DCDF6300D7AD06 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		8E0DCE7420DCE5C600D7AD06 /* WeatherCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherCodable.swift; path = Model/WeatherCodable.swift; sourceTree = "<group>"; };
+		8E0DCE7420DCE5C600D7AD06 /* WeatherCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCodable.swift; sourceTree = "<group>"; };
 		8E0DCE7620DCEA7100D7AD06 /* ErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodes.swift; sourceTree = "<group>"; };
 		8E0DCE7820DD065200D7AD06 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8E0DCE7A20DD06B900D7AD06 /* CMWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMWeather.swift; sourceTree = "<group>"; };
@@ -53,6 +58,11 @@
 		8E1412CE20DB8D77005DBBC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E200F9720DE4CFE00C9B9B9 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E200F9B20DE4EDA00C9B9B9 /* ForecastCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionView.swift; sourceTree = "<group>"; };
+		8E200F9E20DE5AEF00C9B9B9 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		8E200FA020DE5B0300C9B9B9 /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		8E200FA220DE5FB900C9B9B9 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		8E200FA520DE6AA600C9B9B9 /* RestaurantCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantCodable.swift; path = Services/RestaurantCodable.swift; sourceTree = "<group>"; };
+		8E200FA920DE750C00C9B9B9 /* CMRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMRestaurant.swift; sourceTree = "<group>"; };
 		8EAD075020DE276400285B85 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		8EAD075220DE2A7600285B85 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		8EAD075520DE368900285B85 /* AdditionalInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionalInfo.xib; sourceTree = "<group>"; };
@@ -85,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0DCE6220DBD4D800D7AD06 /* Weather */,
+				8E200F9D20DE59A500C9B9B9 /* Restaurants */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -117,6 +128,7 @@
 		8E0DCE6C20DCDAF300D7AD06 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8E0DCE7420DCE5C600D7AD06 /* WeatherCodable.swift */,
 				8E0DCE6D20DCDB9400D7AD06 /* WeatherService.swift */,
 			);
 			path = Services;
@@ -126,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				8E0DCE7A20DD06B900D7AD06 /* CMWeather.swift */,
-				8E0DCE7420DCE5C600D7AD06 /* WeatherCodable.swift */,
 				8E0DCE7C20DD2C4700D7AD06 /* WeatherIcon.swift */,
 				8EAD075020DE276400285B85 /* Temperature.swift */,
 			);
@@ -181,6 +192,34 @@
 				8E200F9720DE4CFE00C9B9B9 /* ForecastCollectionViewCell.swift */,
 			);
 			path = Forecasts;
+			sourceTree = "<group>";
+		};
+		8E200F9D20DE59A500C9B9B9 /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				8E200FA820DE74F600C9B9B9 /* Model */,
+				8E200FA420DE5FC500C9B9B9 /* Services */,
+				8E200FA020DE5B0300C9B9B9 /* RestaurantViewModel.swift */,
+				8E200F9E20DE5AEF00C9B9B9 /* RestaurantViewController.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		8E200FA420DE5FC500C9B9B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8E200FA220DE5FB900C9B9B9 /* RestaurantService.swift */,
+				8E200FA520DE6AA600C9B9B9 /* RestaurantCodable.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		8E200FA820DE74F600C9B9B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E200FA920DE750C00C9B9B9 /* CMRestaurant.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8EAD075420DE367100285B85 /* Additional Info */ = {
@@ -343,10 +382,15 @@
 				8E0DCE7920DD065200D7AD06 /* Utils.swift in Sources */,
 				8E0DCE7720DCEA7100D7AD06 /* ErrorCodes.swift in Sources */,
 				8E200F9820DE4CFE00C9B9B9 /* ForecastCollectionViewCell.swift in Sources */,
+				8E200F9F20DE5AEF00C9B9B9 /* RestaurantViewController.swift in Sources */,
 				8E0DCE6B20DCCC6B00D7AD06 /* LocationServices.swift in Sources */,
 				8E0DCE7D20DD2C4700D7AD06 /* WeatherIcon.swift in Sources */,
+				8E200FA620DE6AA600C9B9B9 /* RestaurantCodable.swift in Sources */,
+				8E200FA120DE5B0300C9B9B9 /* RestaurantViewModel.swift in Sources */,
 				8E0DCE6E20DCDB9400D7AD06 /* WeatherService.swift in Sources */,
 				8E0DCE7B20DD06B900D7AD06 /* CMWeather.swift in Sources */,
+				8E200FAA20DE750C00C9B9B9 /* CMRestaurant.swift in Sources */,
+				8E200FA320DE5FB900C9B9B9 /* RestaurantService.swift in Sources */,
 				8EAD075820DE369700285B85 /* AdditionalInfo.swift in Sources */,
 				8E1412C320DB8D72005DBBC6 /* AppDelegate.swift in Sources */,
 			);

@@ -7,8 +7,11 @@
 //
 
 import UIKit
-
+import CoreLocation
 struct Utils {
+    
+    static var currentLocation : CLLocation?
+    
     static func getCurrentDay()->String{
         let date = Date()
         let formatter = DateFormatter()

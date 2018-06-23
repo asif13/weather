@@ -35,6 +35,7 @@ extension LocationService : CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
+            Utils.currentLocation = location
             delegate?.didUpdateLocation(self, location: location)
         }
     }

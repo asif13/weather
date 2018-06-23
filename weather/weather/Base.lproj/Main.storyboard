@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1os-BD-yY0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ul0-DQ-n9K">
-                                <rect key="frame" x="0.0" y="20" width="375" height="497"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="453"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufN-ZY-JOc">
                                         <rect key="frame" x="24" y="30" width="343" height="110"/>
@@ -67,6 +67,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="imageView.clipsToBounds" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="57g-j5-MHw" kind="show" id="Q4K-uk-rMt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.82352941180000006" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -235,6 +238,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="d8n-P4-ZUP">
+                        <barButtonItem key="backBarButtonItem" title=" " id="8NY-H9-LXB"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="additionalInfo" destination="2P4-mV-M3L" id="Jaa-UL-huh"/>
                         <outlet property="forecastView" destination="Lrc-Qo-hYp" id="iSi-F3-PMS"/>
@@ -247,6 +253,65 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.8" y="79.610194902548727"/>
+        </scene>
+        <!--Nearby Restaurants-->
+        <scene sceneID="BbX-qr-IOv">
+            <objects>
+                <viewController id="57g-j5-MHw" customClass="RestaurantViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q4b-hi-KdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="689-9t-Thi">
+                                <rect key="frame" x="0.0" y="149" width="375" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIe-g0-qCs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="KKd-z0-BAP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="689-9t-Thi" firstAttribute="top" secondItem="KIe-g0-qCs" secondAttribute="bottom" id="2Nd-BH-bkS"/>
+                            <constraint firstItem="KIe-g0-qCs" firstAttribute="leading" secondItem="4Vg-Sc-F6g" secondAttribute="leading" id="I6p-se-uQT"/>
+                            <constraint firstItem="689-9t-Thi" firstAttribute="trailing" secondItem="4Vg-Sc-F6g" secondAttribute="trailing" id="SFV-I3-eaE"/>
+                            <constraint firstItem="689-9t-Thi" firstAttribute="leading" secondItem="4Vg-Sc-F6g" secondAttribute="leading" id="fQP-ML-a2r"/>
+                            <constraint firstItem="KIe-g0-qCs" firstAttribute="trailing" secondItem="4Vg-Sc-F6g" secondAttribute="trailing" id="gDc-XS-hW2"/>
+                            <constraint firstItem="KIe-g0-qCs" firstAttribute="top" secondItem="4Vg-Sc-F6g" secondAttribute="top" id="kml-KW-GQn"/>
+                            <constraint firstItem="689-9t-Thi" firstAttribute="bottom" secondItem="4Vg-Sc-F6g" secondAttribute="bottom" id="nn3-eK-CI7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Vg-Sc-F6g"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nearby Restaurants" id="nnh-AV-o4t">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ETm-6K-dXk"/>
+                        <barButtonItem key="rightBarButtonItem" title="🔍" id="ewb-2u-j3Q"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yb8-fh-Wfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2068" y="79.610194902548727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VCC-ED-Jaj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1os-BD-yY0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eDf-Bh-np5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6BT-D6-B14"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxb-NI-RJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="79.610194902548727"/>
         </scene>

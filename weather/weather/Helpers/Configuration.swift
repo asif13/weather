@@ -14,19 +14,17 @@ class Configuration {
     static let `default` = Configuration()
     
     var openWeatherAccesToken : String?
-    var SFOAuthRedirectURI : String?
-    var SFEndPointUrl : String?
-    var SFClientSecret: String?
+    var zomatoAppId : String?
     let configurationsKey = "Configurations"
-    
+
     /// Initilize configuration file with xcconfig values from plist
     func initalize(){
         
         guard let configurations = Bundle.main.infoDictionary?[configurationsKey] as? [String: Any] else { return }
         
         openWeatherAccesToken = configurations["OpenWeatherAccessToken"] as? String
- 
         
+        zomatoAppId = configurations["ZomatoAppId"] as? String
     }
     
 }

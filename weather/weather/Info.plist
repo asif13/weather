@@ -4,6 +4,8 @@
 <dict>
 	<key>Configurations</key>
 	<dict>
+		<key>ZomatoAppId</key>
+		<string>06a706f77fdee548ba0ed4f6a6d8905e</string>
 		<key>OpenWeatherAccessToken</key>
 		<string>48ceb0fb1e854449e7ffa58633e19d19</string>
 	</dict>
