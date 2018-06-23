@@ -27,13 +27,11 @@ struct Main : Codable{
 struct Weather : Codable {
     var id : Int?
     var main : String?
-    var description : String?{
-        didSet {
-            //accessing description return objects info
-            weatherDescription = description
-        }
+    var description : String?
+    
+    var weatherDescription : String? {
+        return description
     }
-    var weatherDescription : String?
     
     var icon : String?
 }

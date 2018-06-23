@@ -40,5 +40,17 @@ class WeatherViewController: UIViewController {
 
             }
         }
+        
+        //closure to display error
+
+        viewModel?.didGetError = { [weak self] error in
+            
+            DispatchQueue.main.async {
+                self?.alert("Alert", message: error.error.rawValue)
+
+            }
+            
+        }
+        
     }
 }

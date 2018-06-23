@@ -8,6 +8,16 @@
 
 import Foundation
 
+struct Utils {
+    static func getCurrentDay()->String{
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        let dayInWeek = formatter.string(from: date)
+        return dayInWeek
+    }
+}
+
 struct TemperatureConverter {
     static func kelvinToCelsius(_ degrees: Double) -> Double {
         return round(degrees - 273.15)
@@ -15,18 +25,6 @@ struct TemperatureConverter {
     
     static func kelvinToFahrenheit(_ degrees: Double) -> Double {
         return round(degrees * 9 / 5 - 459.67)
-    }
-}
-
-struct Temperature {
-    let degrees: String
-    
-    init(country: String, openWeatherMapDegrees: Double) {
-        if country == "US" {
-            degrees = String(TemperatureConverter.kelvinToFahrenheit(openWeatherMapDegrees)) + "\u{f045}"
-        } else {
-            degrees = String(TemperatureConverter.kelvinToCelsius(openWeatherMapDegrees)) + "\u{f03c}"
-        }
     }
 }
 

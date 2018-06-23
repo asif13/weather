@@ -9,11 +9,11 @@
 import Foundation
 
 struct ErrorCodes {
-    enum Code : Int {
-        case urlParsing
-        case networkError
-        case dataParsing
-        case locationFetching
+    enum Code : String {
+        case urlParsing = "Failed to parse url"
+        case networkError = "Network error"
+        case dataParsing = "Failed to parse data"
+        case locationFetching = "Failed to fetch location"
     }
     let error : Code
 }
