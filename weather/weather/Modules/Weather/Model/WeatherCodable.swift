@@ -22,13 +22,17 @@ struct List : Codable {
 
 struct Main : Codable{
     var temp : Double?
+    var pressure : Double?
+    var humidity : Double?
+    var temp_max : Double?
+    var temp_min : Double?
 }
 
 struct Weather : Codable {
     var id : Int?
     var main : String?
     var description : String?
-    
+    var wind : Wind?
     var weatherDescription : String? {
         return description
     }
@@ -39,4 +43,7 @@ struct Weather : Codable {
 struct City : Codable{
     var country : String?
     var name : String?
+}
+struct Wind : Codable {
+    var speed : Double?
 }

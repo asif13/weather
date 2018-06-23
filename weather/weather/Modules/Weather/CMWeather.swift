@@ -21,6 +21,14 @@ struct CMWeather {
     let iconText: String
     let temperature: String
     let forecasts: [CMForecast]
-    
+    let info : WeatherExtraInfo?
+}
+
+struct WeatherExtraInfo {
+    var humidity : String?
+    var pressure : String?
+    var windSpeed : String?
+    var minimumTemp : String?
+    var maximumTemp : String?
 }
 

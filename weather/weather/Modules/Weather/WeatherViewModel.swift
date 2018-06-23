@@ -59,13 +59,16 @@ class WeatherViewModel {
         //get future forcasts
         let forecasts = self.getForecastInfo(weather: weather)
         
+        let extraInfo = self.getExtraInfo(weather: weather)
+        
         let cmWeather = CMWeather(
             location: location ,
             weatherDescription: currentWeather?.weatherDescription ?? "",
             date: day,
             iconText: weatherIcon.iconText,
             temperature: forecastTemperature,
-            forecasts: forecasts
+            forecasts: forecasts,
+            info: extraInfo
         )
         
         return cmWeather
@@ -96,6 +99,34 @@ class WeatherViewModel {
             forecasts.append(forecast)
         }
         return forecasts
+    }
+    
+    fileprivate func getExtraInfo(weather: OpenWeather)->WeatherExtraInfo{
+        
+        guard let list = weather.list.first else {
+            return WeatherExtraInfo(humidity: "", pressure: "", windSpeed: "", minimumTemp : "", maximumTemp : "")
+        }
+        
+        let humidty = list.main?.humidity ?? 0
+        let pressure = list.main?.pressure ?? 0
+        let windSpeed = list.weather?.first?.wind?.speed ?? 0
+        let minimumTemp = Temperature(country: weather.country ?? "", openWeatherMapDegrees:list.main?.temp_min ?? 0).degrees
+        
+        let maximumTemp = Temperature(country: weather.country ?? "", openWeatherMapDegrees:list.main?.temp_max ?? 0).degrees
+        
+        let info = WeatherExtraInfo(
+            humidity: "\(humidty) %",
+            pressure: "\(convertHpaToPsi(hpa: pressure)) psi",
+            windSpeed: "\(windSpeed) m/sec",
+            minimumTemp : minimumTemp,
+            maximumTemp : maximumTemp
+        )
+        
+        return info
+        
+    }
+    fileprivate func convertHpaToPsi(hpa : Double) -> Int{
+        return Int(hpa * 0.014)
     }
 }
 

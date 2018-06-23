@@ -6,7 +6,7 @@
 //  Copyright © 2018 Asif Junaid. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Utils {
     static func getCurrentDay()->String{
@@ -43,5 +43,13 @@ struct ForecastDateTime {
         dateFormatter.dateFormat = "HH:mm"
         let date = Date(timeIntervalSince1970: rawDate)
         return dateFormatter.string(from: date)
+    }
+}
+extension UIView {
+    /// Used to simplify loading from a view
+    ///
+    /// - Returns: Inferred UIView type
+    class func fromNib<T: UIView>() -> T {
+        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
     }
 }

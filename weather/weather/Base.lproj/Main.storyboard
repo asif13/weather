@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="519"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufN-ZY-JOc">
-                                        <rect key="frame" x="24" y="30" width="343" height="128"/>
+                                        <rect key="frame" x="24" y="30" width="343" height="110"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWh-xH-dOd">
                                                 <rect key="frame" x="0.0" y="8" width="203" height="29"/>
@@ -79,17 +79,17 @@
                                             <constraint firstItem="1xM-x6-LaE" firstAttribute="top" secondItem="ufN-ZY-JOc" secondAttribute="top" constant="8" id="ckD-ar-zuu"/>
                                             <constraint firstItem="hrl-dc-4ek" firstAttribute="top" secondItem="GHE-45-lcH" secondAttribute="bottom" constant="8" id="hMU-Sm-ESH"/>
                                             <constraint firstItem="hrl-dc-4ek" firstAttribute="leading" secondItem="GHE-45-lcH" secondAttribute="leading" id="hYg-7P-fb9"/>
-                                            <constraint firstAttribute="height" constant="128" id="jwd-hG-FuF"/>
+                                            <constraint firstAttribute="height" constant="110" id="jwd-hG-FuF"/>
                                             <constraint firstItem="hrl-dc-4ek" firstAttribute="trailing" secondItem="GHE-45-lcH" secondAttribute="trailing" id="lKm-dz-sFS"/>
                                             <constraint firstItem="ZWh-xH-dOd" firstAttribute="leading" secondItem="ufN-ZY-JOc" secondAttribute="leading" id="rY4-if-xld"/>
                                             <constraint firstItem="GHE-45-lcH" firstAttribute="leading" secondItem="ZWh-xH-dOd" secondAttribute="leading" id="uIk-q0-rCO"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6K-Nn-Ser">
-                                        <rect key="frame" x="0.0" y="145.5" width="375" height="228"/>
+                                        <rect key="frame" x="0.0" y="140" width="375" height="170"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-QJ-ohX">
-                                                <rect key="frame" x="8" y="20.5" width="152" height="187"/>
+                                                <rect key="frame" x="8" y="-8.5" width="152" height="187"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="152" id="eth-fy-eB5"/>
                                                     <constraint firstAttribute="height" constant="187" id="ld9-hE-gFA"/>
@@ -99,7 +99,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-V0-6QX">
-                                                <rect key="frame" x="168" y="20.5" width="199" height="187"/>
+                                                <rect key="frame" x="168" y="-8.5" width="199" height="187"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="187" id="c5L-hN-DQz"/>
                                                 </constraints>
@@ -112,20 +112,36 @@
                                         <constraints>
                                             <constraint firstItem="1cF-QJ-ohX" firstAttribute="centerY" secondItem="y6K-Nn-Ser" secondAttribute="centerY" id="BKW-AW-hsz"/>
                                             <constraint firstItem="ncL-V0-6QX" firstAttribute="centerY" secondItem="y6K-Nn-Ser" secondAttribute="centerY" id="Vz9-tG-iYE"/>
-                                            <constraint firstAttribute="height" constant="228" id="aTE-ZI-Ide"/>
+                                            <constraint firstAttribute="height" constant="170" id="aTE-ZI-Ide"/>
                                             <constraint firstAttribute="trailing" secondItem="ncL-V0-6QX" secondAttribute="trailing" constant="8" id="f92-AJ-OSr"/>
                                             <constraint firstItem="ncL-V0-6QX" firstAttribute="leading" secondItem="1cF-QJ-ohX" secondAttribute="trailing" constant="8" id="h0v-ZE-LgX"/>
                                             <constraint firstItem="1cF-QJ-ohX" firstAttribute="leading" secondItem="y6K-Nn-Ser" secondAttribute="leading" constant="8" id="zQ0-EI-Omq"/>
                                         </constraints>
                                     </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2P4-mV-M3L">
+                                        <rect key="frame" x="0.0" y="310" width="375" height="145.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="145.5" id="dkc-ue-N4n"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-JN-epH">
+                                        <rect key="frame" x="176" y="455.5" width="23" height="37"/>
+                                        <color key="pageIndicatorTintColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.28235294119999998" green="0.20000000000000001" blue="0.10980392160000001" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98431372549019602" green="0.82352941176470584" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="y6K-Nn-Ser" firstAttribute="centerY" secondItem="Ul0-DQ-n9K" secondAttribute="centerY" id="2M9-6n-ihO"/>
                                     <constraint firstItem="ufN-ZY-JOc" firstAttribute="top" secondItem="Ul0-DQ-n9K" secondAttribute="top" constant="30" id="EFv-rD-3Ns"/>
+                                    <constraint firstItem="fCx-JN-epH" firstAttribute="centerX" secondItem="2P4-mV-M3L" secondAttribute="centerX" id="JXB-fe-RbP"/>
+                                    <constraint firstItem="fCx-JN-epH" firstAttribute="top" secondItem="2P4-mV-M3L" secondAttribute="bottom" id="KSP-T0-3Em"/>
+                                    <constraint firstItem="2P4-mV-M3L" firstAttribute="leading" secondItem="Ul0-DQ-n9K" secondAttribute="leading" id="ME2-aj-4RU"/>
                                     <constraint firstAttribute="trailing" secondItem="ufN-ZY-JOc" secondAttribute="trailing" constant="8" id="NzX-FR-lFu"/>
+                                    <constraint firstAttribute="trailing" secondItem="2P4-mV-M3L" secondAttribute="trailing" id="Vob-qQ-Jzq"/>
+                                    <constraint firstItem="y6K-Nn-Ser" firstAttribute="top" secondItem="ufN-ZY-JOc" secondAttribute="bottom" id="g76-e0-U8H"/>
                                     <constraint firstItem="y6K-Nn-Ser" firstAttribute="leading" secondItem="Ul0-DQ-n9K" secondAttribute="leading" id="jn4-j1-tz1"/>
                                     <constraint firstAttribute="trailing" secondItem="y6K-Nn-Ser" secondAttribute="trailing" id="lRO-dM-nyN"/>
+                                    <constraint firstItem="2P4-mV-M3L" firstAttribute="top" secondItem="y6K-Nn-Ser" secondAttribute="bottom" id="nPK-l9-KnW"/>
                                     <constraint firstItem="ufN-ZY-JOc" firstAttribute="leading" secondItem="Ul0-DQ-n9K" secondAttribute="leading" constant="24" id="oiY-ln-T7k"/>
                                 </constraints>
                             </view>
@@ -151,6 +167,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionalInfo" destination="2P4-mV-M3L" id="Jaa-UL-huh"/>
+                        <outlet property="pageControl" destination="fCx-JN-epH" id="esD-eb-W7Y"/>
                         <outletCollection property="weatherDetails" destination="ZWh-xH-dOd" collectionClass="NSMutableArray" id="jes-S9-1fH"/>
                         <outletCollection property="weatherDetails" destination="GHE-45-lcH" collectionClass="NSMutableArray" id="l5y-XT-u4H"/>
                         <outletCollection property="weatherDetails" destination="hrl-dc-4ek" collectionClass="NSMutableArray" id="ngp-4K-Bjn"/>
