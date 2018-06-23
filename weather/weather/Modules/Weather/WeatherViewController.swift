@@ -17,6 +17,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var additionalInfo: UIScrollView!
     
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var forecastView: ForecastCollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,9 @@ class WeatherViewController: UIViewController {
                 self?.weatherDetails[3].text = weather?.iconText ?? ""
                 self?.weatherDetails[4].text = weather?.temperature ?? ""
                 self?.updateAdditionalInfo(info: weather?.info)
+                if let forecast = weather?.forecasts{
+                    self?.forecastView.model = forecast
+                }
             }
         }
         
