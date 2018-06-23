@@ -18,9 +18,10 @@ class WeatherViewModel {
             didUpdateModel?(model)
         }
     }
-    
+    //closure called when model is updated
     var didUpdateModel : ((CMWeather?)->())?
     
+    //clousre called on error
     var didGetError : ((ErrorCodes)->())?
 
     init() {
@@ -84,6 +85,10 @@ class WeatherViewModel {
         return city
     }
     
+    /// Parse forecast data from open weather
+    ///
+    /// - Parameter weather: open weather model
+    /// - Returns: array of CMForecast
     fileprivate func getForecastInfo(weather : OpenWeather) ->  [CMForecast]{
         var forecasts = [CMForecast]()
         
@@ -101,6 +106,10 @@ class WeatherViewModel {
         return forecasts
     }
     
+    /// Parse addition weather info
+    ///
+    /// - Parameter weather: open weather model
+    /// - Returns: WeatherExtraInfo object
     fileprivate func getExtraInfo(weather: OpenWeather)->WeatherExtraInfo{
         
         guard let list = weather.list.first else {
@@ -125,15 +134,20 @@ class WeatherViewModel {
         return info
         
     }
+    /// Converts atomsperic pressure from hpa to psi
+    ///
+    /// - Parameter hpa: data
+    /// - Returns: psi value
     fileprivate func convertHpaToPsi(hpa : Double) -> Int{
         return Int(hpa * 0.014)
     }
 }
 
 extension WeatherViewModel : locationServiceDelegate{
-   
+    //delegate called on update of location
     func didUpdateLocation(_ service: LocationService, location: CLLocation) {
        
+        //fetch weather infor from service
         weatherService.fetchWeatherInformation(location: location, successblock: { [weak self] weather in
             
             self?.model = self?.parseWeatherData(weather: weather)
@@ -148,9 +162,9 @@ extension WeatherViewModel : locationServiceDelegate{
             
         }
     }
-    
+    //delegate called on error
     func didFailWithError(_ service: LocationService, error: Error) {
-        
+        didGetError?(ErrorCodes(error: .locationFetching))
     }
     
 }

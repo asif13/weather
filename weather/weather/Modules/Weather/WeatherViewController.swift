@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Viewcontroller to display weather and forecast data
 class WeatherViewController: UIViewController {
 
     var viewModel : WeatherViewModel?
@@ -39,6 +40,7 @@ class WeatherViewController: UIViewController {
         viewModel = WeatherViewModel()
         viewModel?.updateCurrentLocation()
         popularRestaurantsButton.isEnabled = false
+        
         //closure to update view when model is updated
         viewModel?.didUpdateModel = { [weak self] weather in
             DispatchQueue.main.async {
@@ -69,6 +71,9 @@ class WeatherViewController: UIViewController {
         
     }
     
+    /// Updates addtional info, displayed as pagination
+    ///
+    /// - Parameter info: WeatherExtraInfo
     func updateAdditionalInfo(info:WeatherExtraInfo?){
         
         guard let weatherInfo = info else { return }
@@ -82,13 +87,20 @@ class WeatherViewController: UIViewController {
         infoview2.frame.origin.x = view.frame.width
         additionalInfo.addSubview(infoview2)
         
-        updateFirstAdditionalInfo(info: weatherInfo,infoView1: infoview1,infoView2: infoview2)
+        updateAdditionalInfoValues(info: weatherInfo,infoView1: infoview1,infoView2: infoview2)
 
         
         additionalInfo.contentSize = CGSize(width: view.frame.width * 2, height: infoview2.frame.height)
         
     }
-    func updateFirstAdditionalInfo(info:WeatherExtraInfo,infoView1 : AdditionalInfo,infoView2:AdditionalInfo){
+    
+    /// Update values for additional info
+    ///
+    /// - Parameters:
+    ///   - info: WeatherExtraInfo
+    ///   - infoView1: First view in pagination
+    ///   - infoView2: Second view in pagination
+    func updateAdditionalInfoValues(info:WeatherExtraInfo,infoView1 : AdditionalInfo,infoView2:AdditionalInfo){
         
         infoView1.titles[0].text = info.pressure ?? ""
         
@@ -111,7 +123,7 @@ class WeatherViewController: UIViewController {
 extension WeatherViewController : UIScrollViewDelegate{
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+        //update page control values
         pageControl.currentPage = Int(scrollView.contentOffset.x / CGFloat(view.frame.width))
         
     }

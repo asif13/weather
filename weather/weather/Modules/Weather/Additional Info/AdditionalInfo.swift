@@ -8,6 +8,7 @@
 
 import UIKit
 
+//displays additional weather info
 class AdditionalInfo: UIView {
 
     @IBOutlet var titles: [UILabel]!

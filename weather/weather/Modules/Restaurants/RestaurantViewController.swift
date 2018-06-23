@@ -26,6 +26,7 @@ class RestaurantViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func updateViews(){
         
         navigationController?.navigationBar.isHidden = false
@@ -34,9 +35,12 @@ class RestaurantViewController: UIViewController {
             view.dropShadow()
         }
     }
+    
+    /// Update view model closures
     func updateViewModel(){
        
         viewModel.fetchRestaurants()
+       
         //closure to update view when model is updated
         viewModel.didUpdateModel = { [weak self] restaurants in
             DispatchQueue.main.async {

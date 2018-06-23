@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//Model to map data from open weather 
 struct OpenWeather: Codable {
     var city : City
     var country : String?

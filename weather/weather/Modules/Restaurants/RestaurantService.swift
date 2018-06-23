@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import Alamofire
 
+//Service to fetch restaurant data from Zomato
 class RestaurantService {
     
     let restaurantSearchUrl = "https://developers.zomato.com/api/v2.1/search"

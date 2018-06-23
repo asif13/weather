@@ -9,6 +9,8 @@
 import UIKit
 import Cosmos
 import SDWebImage
+
+//Table view cell to display restaurant data
 class RestaurantTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumbnail: UIImageView!
@@ -29,6 +31,10 @@ class RestaurantTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    /// Update cell info
+    ///
+    /// - Parameter restaurant: CMRestaurant
     func updateCell(restaurant : CMRestaurant){
         
         name.text = restaurant.name ?? ""
@@ -38,7 +44,8 @@ class RestaurantTableViewCell: UITableViewCell {
         ratingView.rating = restaurant.rating ?? 0
         reviews.text = "\(restaurant.reviewCount ?? 0) reviews"
         if let url = restaurant.imageUrl {
-            
+           
+            //use sdwebimage to fetch and cache thumbnail images
            thumbnail.sd_setShowActivityIndicatorView(true)
            thumbnail.sd_setIndicatorStyle(.gray)
             

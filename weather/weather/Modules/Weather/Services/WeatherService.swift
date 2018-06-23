@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import Alamofire
 
+//Service to fetch weather data from open weather map
 class WeatherService {
    
     let weatherApiurl = "http://api.openweathermap.org/data/2.5/forecast"

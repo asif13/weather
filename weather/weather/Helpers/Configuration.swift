@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+//fetch configuration data from plist
 class Configuration {
     
     static let `default` = Configuration()

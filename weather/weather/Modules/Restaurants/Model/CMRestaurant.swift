@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Model to store restaurant info
 struct CMRestaurant {
     let city : String?
     let cuisines : String?

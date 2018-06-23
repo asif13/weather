@@ -8,6 +8,7 @@
 
 import UIKit
 
+//View Mode for restaurant module
 class RestaurantViewModel: NSObject {
     let service = RestaurantService()
     var model = [CMRestaurant](){
@@ -15,11 +16,13 @@ class RestaurantViewModel: NSObject {
             didUpdateModel?(model)
         }
     }
-    
+    //clousre called on update of model
     var didUpdateModel : (([CMRestaurant])->())?
     
+    //clousure called on error
     var didGetError : ((ErrorCodes)->())?
     
+    /// Fetch restaurant data
     func fetchRestaurants(){
         
         guard let location = Utils.currentLocation else { return }
@@ -44,6 +47,11 @@ class RestaurantViewModel: NSObject {
             }
         }
     }
+    
+    /// Parse zomato data to create model
+    ///
+    /// - Parameter restaurants: restaurant object from Zomato
+    /// - Returns: Restaurant Object
     func parseRetaurantData(restaurants : [Restaurant])->[CMRestaurant]{
         var models = [CMRestaurant]()
         

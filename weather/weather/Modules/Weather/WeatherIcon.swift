@@ -5,6 +5,7 @@
 
 import Foundation
 
+//maps weather icon value from open weather api to correspoinding unicode font value
 struct WeatherIcon {
   let iconText: String
 

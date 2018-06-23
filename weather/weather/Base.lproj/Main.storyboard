@@ -130,7 +130,7 @@
                                     </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-JN-epH">
                                         <rect key="frame" x="176" y="455.5" width="23" height="37"/>
-                                        <color key="pageIndicatorTintColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="pageIndicatorTintColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="currentPageIndicatorTintColor" red="0.28235294119999998" green="0.20000000000000001" blue="0.10980392160000001" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                     </pageControl>
                                 </subviews>

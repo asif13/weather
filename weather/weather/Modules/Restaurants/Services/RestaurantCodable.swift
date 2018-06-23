@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//Codable struct for data fetched from Zomato api of restaurants
 struct RestaurantCodable: Codable {
     var restaurants : [Restaurants]
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Error codes to be displayed
 struct ErrorCodes {
     enum Code : String {
         case urlParsing = "Failed to parse url"

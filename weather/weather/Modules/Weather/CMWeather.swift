@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Model for weather and forecast
 struct CMForecast {
     let time: String
     let icon: String

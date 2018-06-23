@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Displays upcoming fore cast data
 class ForecastCollectionView: UICollectionView {
     var model = [CMForecast](){
         didSet {
@@ -27,10 +28,11 @@ extension ForecastCollectionView : UICollectionViewDelegate,UICollectionViewData
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? ForecastCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
         let forecast = model[indexPath.row]
-        cell.time.text = forecast.time
-        cell.temperature.text = forecast.temperature
-        cell.icon.text = forecast.icon
+        
+        cell.updateCell(forecast: forecast)
+        
         return cell
     }
     

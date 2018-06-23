@@ -8,6 +8,8 @@
 
 import UIKit
 import SDWebImage
+
+//Show restaurant list info
 class RestaurantTableView: UITableView {
     
     var model = [CMRestaurant](){

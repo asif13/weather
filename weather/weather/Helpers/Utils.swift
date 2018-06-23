@@ -12,6 +12,7 @@ struct Utils {
     
     static var currentLocation : CLLocation?
     
+    //get current day
     static func getCurrentDay()->String{
         let date = Date()
         let formatter = DateFormatter()
@@ -20,7 +21,7 @@ struct Utils {
         return dayInWeek
     }
 }
-
+//convert degrees to celcius or fahrenheit
 struct TemperatureConverter {
     static func kelvinToCelsius(_ degrees: Double) -> Double {
         return round(degrees - 273.15)
@@ -31,6 +32,7 @@ struct TemperatureConverter {
     }
 }
 
+//convert datetime to time format displayed for forecast
 struct ForecastDateTime {
     let rawDate: Double
     let timeZone: TimeZone
@@ -55,6 +57,7 @@ extension UIView {
     class func fromNib<T: UIView>() -> T {
         return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
     }
+    //Drop shadow on views
     func dropShadow(scale: Bool = true) {
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.withAlphaComponent(0.30).cgColor

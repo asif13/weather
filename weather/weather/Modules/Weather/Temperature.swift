@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//Model to store temperature
 struct Temperature {
     let degrees: String
     
